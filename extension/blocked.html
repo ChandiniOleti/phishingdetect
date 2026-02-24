@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard Warning</title>
+    <link rel="stylesheet" href="blocked.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="badge">!</div>
+        <div class="title">Unsafe site blocked</div>
+        <div id="subtitle" class="subtitle">Phishing detected.</div>
+
+        <div class="kv">
+          <div class="k">URL</div>
+          <div id="url" class="v mono">—</div>
+        </div>
+        <div class="kv">
+          <div class="k">Hostname</div>
+          <div id="host" class="v mono">—</div>
+        </div>
+
+        <div class="actions">
+          <button id="back" class="ghost">Back</button>
+          <button id="continue" class="danger">Continue (5 min)</button>
+        </div>
+
+        <div class="hint">
+          Tip: Turn off Protection in the extension popup to disable blocking.
+        </div>
+      </div>
+    </div>
+
+    <script src="blocked.js"></script>
+  </body>
+</html>
+

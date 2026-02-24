@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">PhishGuard AI</div>
+        <div class="toggle" title="Enable/disable automatic protection">
+          <span id="toggleLabel">Protection ON</span>
+          <label class="switch">
+            <input id="toggleProtection" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="currentCard" class="status pending">
+          <div class="status-left">
+            <div id="currentIcon" class="badge">…</div>
+            <div style="min-width:0">
+              <div id="currentTitle" class="status-title">Checking current site</div>
+              <div id="currentSub" class="status-sub">Scanning...</div>
+            </div>
+          </div>
+        </div>
+        <div class="kv">
+          <div class="key">Current URL</div>
+          <div id="currentUrl" class="value">—</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">Manual Check</div>
+        <div class="row">
+          <div class="manual">
+            <input id="manualUrl" type="text" placeholder="https://example.com" />
+            <button id="btnManualCheck">Check</button>
+          </div>
+          <div id="manualResult" class="manual-result"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">Statistics</div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-left">
+              <span class="dot green"></span>
+              <span>URLs Checked</span>
+            </div>
+            <div id="statChecked" class="stat-val">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-left">
+              <span class="dot red"></span>
+              <span>Threats Blocked</span>
+            </div>
+            <div id="statThreats" class="stat-val">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-left">
+              <span class="dot blue"></span>
+              <span>Warnings Shown</span>
+            </div>
+            <div id="statWarnings" class="stat-val">0</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <button id="btnClearStats" class="link">Clear Stats</button>
+          <button id="btnAbout" class="link">About</button>
+        </div>
+
+        <div id="aboutPanel" class="about" hidden>
+          <div class="label">API Token</div>
+          <div class="token-row">
+            <input id="token" type="password" placeholder="Paste token from UI /login" />
+            <button id="btnSaveToken">Save</button>
+          </div>
+          <div id="tokenSaved" class="saved"></div>
+          <p>
+            Backend endpoint:
+            <span style="font-family: var(--mono)">http://localhost:5000/api/scan/url</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "model": "email_distilbert_finetuned",
+  "accuracy": 0.9816666666666667,
+  "loss": 0.09869131513411544,
+  "base_model": "distilbert-base-uncased",
+  "train_samples": 24000,
+  "eval_samples": 6000
+}
