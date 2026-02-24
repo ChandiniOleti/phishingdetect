@@ -1,10 +1,11 @@
-venv/
-.venv/
-backend/venv/
 node_modules/
 frontend/node_modules/
+frontend/dist/
+dist/
+.venv/
+venv/
+backend/venv/
 __pycache__/
 *.exe
 *.csv
 *.safetensors
-.vscode/
