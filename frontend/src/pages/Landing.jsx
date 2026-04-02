@@ -89,7 +89,7 @@ export default function Landing() {
         </div>
         <div className="landing-cta wide">
           <button className="primary" onClick={() => navigate('/login')}>Login / Sign up</button>
-          <a className="ghost-link" href="chrome://extensions/" target="_blank" rel="noreferrer">Load Extension</a>
+          <a className="ghost-link" href="/extension.zip" download="extension.zip">Load Extension</a>
         </div>
       </section>
     </div>
