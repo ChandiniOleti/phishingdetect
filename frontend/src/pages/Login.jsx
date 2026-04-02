@@ -27,8 +27,8 @@ export default function Login() {
   }
 
   return (
-    <div className="stack">
-      <form className="card scan" onSubmit={handleSubmit}>
+    <div className="auth-page">
+      <form className="card scan auth-card" onSubmit={handleSubmit}>
         <div className="card-title">{mode === 'login' ? 'Login' : 'Register'}</div>
         <div className="card-sub" style={{ marginTop: -6 }}>
           After sign-in, you will be taken to the About page to explore features.

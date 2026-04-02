@@ -832,6 +832,19 @@ select.scan-input {
   color: rgba(238, 241, 255, 0.9);
 }
 
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  width: 100%;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+}
+
 @media (max-width: 1100px) {
   .landing-hero {
     grid-template-columns: 1fr;
